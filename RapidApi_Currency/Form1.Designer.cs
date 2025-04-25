@@ -45,7 +45,7 @@
             // 
             this.lblDollar.AutoSize = true;
             this.lblDollar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDollar.Location = new System.Drawing.Point(67, 69);
+            this.lblDollar.Location = new System.Drawing.Point(37, 69);
             this.lblDollar.Name = "lblDollar";
             this.lblDollar.Size = new System.Drawing.Size(98, 25);
             this.lblDollar.TabIndex = 0;
@@ -55,7 +55,7 @@
             // 
             this.lblEuro.AutoSize = true;
             this.lblEuro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblEuro.Location = new System.Drawing.Point(223, 69);
+            this.lblEuro.Location = new System.Drawing.Point(286, 69);
             this.lblEuro.Name = "lblEuro";
             this.lblEuro.Size = new System.Drawing.Size(93, 25);
             this.lblEuro.TabIndex = 1;
@@ -142,12 +142,13 @@
             this.btnApply.TabIndex = 9;
             this.btnApply.Text = "Uygula";
             this.btnApply.UseVisualStyleBackColor = true;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
             // lblSterlin
             // 
             this.lblSterlin.AutoSize = true;
             this.lblSterlin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSterlin.Location = new System.Drawing.Point(367, 69);
+            this.lblSterlin.Location = new System.Drawing.Point(578, 69);
             this.lblSterlin.Name = "lblSterlin";
             this.lblSterlin.Size = new System.Drawing.Size(107, 25);
             this.lblSterlin.TabIndex = 10;
@@ -157,7 +158,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 490);
+            this.ClientSize = new System.Drawing.Size(849, 490);
             this.Controls.Add(this.lblSterlin);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.txtTotalPrice);

@@ -19,6 +19,11 @@ namespace RapidApi_Currency
             InitializeComponent();
         }
 
+        decimal dollar = 0;
+        decimal euro = 0;
+        decimal sterlin = 0;
+
+
         private async void Form1_Load(object sender, EventArgs e)
         {
             //Dollar
@@ -41,9 +46,10 @@ namespace RapidApi_Currency
 
                 var json = JObject.Parse(body);
                 var value = json["result"].ToString();
-                lblDollar.Text = value;
+                lblDollar.Text = "Dollar: " + value;
+                dollar = decimal.Parse(value);
             }
-            
+
             // Euro
             var client2 = new HttpClient();
             var request2 = new HttpRequestMessage
@@ -64,7 +70,8 @@ namespace RapidApi_Currency
 
                 var json = JObject.Parse(body);
                 var value = json["result"].ToString();
-                lblEuro.Text = value;
+                lblEuro.Text = "Euro: " + value;
+                euro = decimal.Parse(value);
             }
 
             //Sterlin
@@ -87,12 +94,35 @@ namespace RapidApi_Currency
 
                 var json = JObject.Parse(body);
                 var value = json["result"].ToString();
-                lblSterlin.Text = value;
+                lblSterlin.Text = "Sterlin: " + value;
+                sterlin = decimal.Parse(value);
             }
-
+            txtTotalPrice.Enabled = false;
         }
 
+        private void btnApply_Click(object sender, EventArgs e)
+        {
 
+            decimal unitPrice = decimal.Parse(txtUnitPrice.Text);
+          
+            decimal totalPrice = 0;
+
+
+            if (rdbDollar.Checked)
+            {
+                totalPrice = unitPrice * dollar;
+            }
+            else if (rdbEuro.Checked)
+            {
+                totalPrice = unitPrice * euro;
+            }
+            else if (rdbSterlin.Checked)
+            {
+                totalPrice = unitPrice * sterlin;
+            }
+
+            txtTotalPrice.Text = totalPrice.ToString("0.00");
+        }
     }
 }
 

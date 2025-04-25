@@ -25,7 +25,7 @@ namespace RapidApi_Currency
             var request = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri("https://currency-conversion-and-exchange-rates.p.rapidapi.com/timeseries?start_date=2019-01-01&end_date=2019-01-02&base=USD&symbols=EUR%2CGBP"),
+                RequestUri = new Uri("https://currency-conversion-and-exchange-rates.p.rapidapi.com/convert?from=USD&to=TRY&amount=1"),
                 Headers =
     {
         { "x-rapidapi-key", "ee46bfe5f8msh9847dc72b78f403p12245cjsn61d2010bb2e7" },
@@ -37,9 +37,13 @@ namespace RapidApi_Currency
                 response.EnsureSuccessStatusCode();
                 var body = await response.Content.ReadAsStringAsync();
                 //Console.WriteLine(body);
+
                 var json = JObject.Parse(body);
                 var value = json["result"].ToString();
+                lblDollar.Text = value;
+            }
+
             }
         }
     }
-}
+

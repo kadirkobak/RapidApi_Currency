@@ -21,6 +21,7 @@ namespace RapidApi_Currency
 
         private async void Form1_Load(object sender, EventArgs e)
         {
+            //Dollar
             var client = new HttpClient();
             var request = new HttpRequestMessage
             {
@@ -42,7 +43,8 @@ namespace RapidApi_Currency
                 var value = json["result"].ToString();
                 lblDollar.Text = value;
             }
-            //
+            
+            // Euro
             var client2 = new HttpClient();
             var request2 = new HttpRequestMessage
             {
@@ -58,6 +60,29 @@ namespace RapidApi_Currency
             {
                 response2.EnsureSuccessStatusCode();
                 var body = await response2.Content.ReadAsStringAsync();
+                //Console.WriteLine(body).;
+
+                var json = JObject.Parse(body);
+                var value = json["result"].ToString();
+                lblEuro.Text = value;
+            }
+
+            //Sterlin
+            var client3 = new HttpClient();
+            var request3 = new HttpRequestMessage
+            {
+                Method = HttpMethod.Get,
+                RequestUri = new Uri("https://currency-conversion-and-exchange-rates.p.rapidapi.com/convert?from=GBP&to=TRY&amount=1"),
+                Headers =
+    {
+        { "x-rapidapi-key", "ee46bfe5f8msh9847dc72b78f403p12245cjsn61d2010bb2e7" },
+        { "x-rapidapi-host", "currency-conversion-and-exchange-rates.p.rapidapi.com" },
+    },
+            };
+            using (var response3 = await client3.SendAsync(request3))
+            {
+                response3.EnsureSuccessStatusCode();
+                var body = await response3.Content.ReadAsStringAsync();
                 //Console.WriteLine(body).;
 
                 var json = JObject.Parse(body);

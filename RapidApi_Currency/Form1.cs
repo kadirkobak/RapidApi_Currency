@@ -36,7 +36,7 @@ namespace RapidApi_Currency
             {
                 response.EnsureSuccessStatusCode();
                 var body = await response.Content.ReadAsStringAsync();
-                //Console.WriteLine(body);
+                //Console.WriteLine(body).;
 
                 var json = JObject.Parse(body);
                 var value = json["result"].ToString();

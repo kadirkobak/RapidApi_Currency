@@ -45,9 +45,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(67, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 25);
+            this.label1.Size = new System.Drawing.Size(98, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Dolar/TL";
+            this.label1.Text = "Dolar / TL";
             // 
             // label2
             // 
@@ -55,9 +55,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(307, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 25);
+            this.label2.Size = new System.Drawing.Size(93, 25);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Euro/TL";
+            this.label2.Text = "Euro / TL";
             // 
             // radioButton1
             // 

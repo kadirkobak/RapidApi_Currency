@@ -38,6 +38,7 @@
             this.txtUnitPrice = new System.Windows.Forms.TextBox();
             this.txtTotalPrice = new System.Windows.Forms.TextBox();
             this.btnApply = new System.Windows.Forms.Button();
+            this.lblSterlin = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblDollar
@@ -54,7 +55,7 @@
             // 
             this.lblEuro.AutoSize = true;
             this.lblEuro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblEuro.Location = new System.Drawing.Point(307, 69);
+            this.lblEuro.Location = new System.Drawing.Point(223, 69);
             this.lblEuro.Name = "lblEuro";
             this.lblEuro.Size = new System.Drawing.Size(93, 25);
             this.lblEuro.TabIndex = 1;
@@ -142,11 +143,22 @@
             this.btnApply.Text = "Uygula";
             this.btnApply.UseVisualStyleBackColor = true;
             // 
+            // lblSterlin
+            // 
+            this.lblSterlin.AutoSize = true;
+            this.lblSterlin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSterlin.Location = new System.Drawing.Point(367, 69);
+            this.lblSterlin.Name = "lblSterlin";
+            this.lblSterlin.Size = new System.Drawing.Size(107, 25);
+            this.lblSterlin.TabIndex = 10;
+            this.lblSterlin.Text = "Sterlin / TL";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 490);
+            this.Controls.Add(this.lblSterlin);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.txtTotalPrice);
             this.Controls.Add(this.txtUnitPrice);
@@ -177,6 +189,7 @@
         private System.Windows.Forms.TextBox txtUnitPrice;
         private System.Windows.Forms.TextBox txtTotalPrice;
         private System.Windows.Forms.Button btnApply;
+        private System.Windows.Forms.Label lblSterlin;
     }
 }
 

@@ -87,7 +87,7 @@ namespace RapidApi_Currency
 
                 var json = JObject.Parse(body);
                 var value = json["result"].ToString();
-                lblEuro.Text = value;
+                lblSterlin.Text = value;
             }
 
         }
